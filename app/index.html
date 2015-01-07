@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" ng-app="CACApp">
+<head>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./cac-app.css"/>
+    <meta charset="UTF-8">
+    <title>countries and capitals</title>
+</head>
+<body>
+
+	<!-- <nav> This will be usefule when..</nav>  -->
+
+	<header class="heading">
+		<h1> Countries and Capitals</h1>
+	</header>
+
+	<section>
+		<div class="search">
+			<button class="searchCountry">Browse Countries</button>
+		</div>
+		<div ng-view></div>
+	</section>
+
+	<div> 
+	<a href="#/home">Home </a>
+	<a href="#/countries">countries </a>
+
+
+	</div>
+
+    <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="./cac-library.js"></script>
+    <script type="text/javascript" src="./cac-app-views.js"></script>
+
+    <script type="text/javascript" src="./home/home.js"></script>
+    <script type="text/javascript" src="./countries/countries.js"></script>
+    <script type="text/javascript" src="./cac-app.js"></script>
+
+</body>
+</html>

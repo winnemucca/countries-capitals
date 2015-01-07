@@ -1,0 +1,37 @@
+<input type='text' class="searcher" placeholder="COUNTRIES AND CAPITALS" ng-model="search" />
+<div ng-if='loading'> searching for countries...</div>
+
+<div ng-if='!loading'> 
+	<table> 
+		<caption> Country info</caption>
+		<thead>
+			<tr> 
+				<th> Home</th>
+				<th> Country Code</th>
+				<th> Capital</th>
+				<th> Area in km</th>
+				<th> Continent</th>
+				<th> Population</th>
+
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="country in countries |filter:search"> 
+				<td> </td>
+				<td>{{country.code}} </td>
+				<td>{{country.capital}} </td>
+				<td>{{country.areaInSqKm}} </td>
+				<td>{{country.continentName}} </td>
+				<td>{{country.population}} </td>
+
+
+
+
+			</tr>
+		</tbody>
+
+
+	</table>
+
+</div>

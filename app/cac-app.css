@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+	padding:0;
+	font-size: 18px; 
+}
+
+.heading {
+	text-align: center;
+	color: red;
+	height: 500px;
+	width: 100%;
+	background: url('http://3.bp.blogspot.com/-pMR2lmHsAQo/T58ZsGri0LI/AAAAAAAAAHI/gNSONDVRVJY/s400/Country_Navigation_Icons.png') blue no-repeat center center fixed;
+	background-size: cover;
+}
+
+.search {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	b
+}
+
+.searchCountry {
+	margin: 0 auto;
+	background-color: red;
+	font-size: 24px;
+}
+
+table {
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid #cecfd5;
+  padding: 10px 15px;
+}
