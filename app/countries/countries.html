@@ -17,7 +17,9 @@
 		</thead>
 
 		<tbody>
-			<tr ng-repeat="country in countries |filter:search"> 
+			<!-- <tr ng-repeat="country in countries track by $index|filter:search|limitTo:10"> --> 
+			<tr ng-repeat="country in countries |filter:search|limitTo:10 "> 
+
 				<td> </td>
 				<td>{{country.code}} </td>
 				<td>{{country.capital}} </td>
