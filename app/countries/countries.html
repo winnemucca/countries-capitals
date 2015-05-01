@@ -1,4 +1,6 @@
-<input type='text' class="searcher" placeholder="COUNTRIES AND CAPITALS" ng-model="search" />
+<div class="search">
+	<input type='text' class="searcher" placeholder="COUNTRIES AND CAPITALS" ng-model="search" />
+</div>
 <div ng-if='loading'> searching for countries...</div>
 
 <div ng-if='!loading'> 
@@ -6,7 +8,7 @@
 		<caption> Country info</caption>
 		<thead>
 			<tr> 
-				<th> Home</th>
+				<th> Name</th>
 				<th> Country Code</th>
 				<th> Capital</th>
 				<th> Area in km</th>
@@ -20,8 +22,14 @@
 			<!-- <tr ng-repeat="country in countries track by $index|filter:search|limitTo:10"> --> 
 			<tr ng-repeat="country in countries |filter:search|limitTo:10 "> 
 
-				<td> </td>
-				<td>{{country.code}} </td>
+				<!-- <td> <a ng-href="#/countries/{{country.countryCode}}"{{country.countryName}}</a> </td> -->
+				<td>
+        			<a class="cac-a" ng-href="#!/countries/:{{ country.countryCode }}">{{ country.countryName }}</a>
+      			</td>
+
+
+				<!-- <td>{{country.countryName}}</td> -->
+				<td>{{country.countryCode}} </td>
 				<td>{{country.capital}} </td>
 				<td>{{country.areaInSqKm}} </td>
 				<td>{{country.continentName}} </td>
@@ -35,5 +43,10 @@
 
 
 	</table>
+
+</div>
+
+<div class="search"> 
+	<a href="#/home" target="new" <button class="searchCountry">Home</button> </a>
 
 </div>
